@@ -1,0 +1,14 @@
+{
+	"name": "chatdamagebuttons-betterrolls5e",
+	"title": "Chat Damage Buttons for Better Rolls 5e",
+	"description": "This module will add damage buttons on damage roll chat cards as implemented by RedReign#5128 to easily apply damage to tokens",
+	"version": "0.1",
+	"author": "Felix & hooking",
+	"systems": ["dnd5e"],
+	"scripts": ["./chatdamagebuttons-betterrolls5e.js"],
+	"styles": ["./chatdamagebuttons-betterrolls5e.css"],
+	"packs": [],
+    "url": "https://github.com/syl3r86/chatdamagebuttons-betterrolls",
+    "manifest": "https://raw.githubusercontent.com/syl3r86/chatdamagebuttons-betterrolls/master/chatdamagebuttons-betterrolls/module.json",
+    "download": "https://github.com/syl3r86/chatdamagebuttons-betterrolls/raw/master/chatdamagebuttons-betterrolls.zip"
+}
