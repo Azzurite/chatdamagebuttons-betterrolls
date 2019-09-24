@@ -1,5 +1,5 @@
 /**
- * @author Felix Müller and hooking#0492
+ * @author Felix MÃ¼ller and hooking#0492
  * @version 0.1
  */
 
@@ -7,8 +7,6 @@ Hooks.on('renderChatMessage', (message, data, html) => {
     let chatCard = html.find('.red-full');
     if (chatCard.length === 0) {
         return;
-    } else {
-        console.log('in proper chatcard');
     }
     let dmgElements = html.find('.red-left-die').parents('.dice-total'); 
     for (let dmgElement of dmgElements) {
@@ -37,11 +35,9 @@ Hooks.on('renderChatMessage', (message, data, html) => {
                 critDmg = chatCard.find('.red-right-die').text();
 
                 // set position on where to put the dialog
-                console.log(ev.originalEvent.screenX);
                 let position = { x: ev.originalEvent.screenX, y: ev.originalEvent.screenY };
                 dmg = await applyCritDamage(Number(dmg), Number(critDmg), position);
             }
-            console.log(dmg);
             // wrapping in html since thats what the applyDamage function expects
             let dmgHtml = $(`<div><h4 class="dice-total">${dmg}</h4></div>`)
 
@@ -89,8 +85,7 @@ async function applyCritDamage(dmg, critdmg, position) {
                     callback: () => { resolve(dmg); }
                 }
             },
-            default: "two",
-            close: () => console.log("This always is logged no matter which option is chosen")
+            default: "two"
         }, options);
         d.render(true);
     });
